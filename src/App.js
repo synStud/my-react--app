@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+// Импорт библиотек.
+
 
 function App() {
 
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([]); // Хук для хранения данных, полученных от API
 
-  useEffect(() => {
+  useEffect(() => { // Хук для выполнения запроса.
 
     axios
-      .get('https://jsonplaceholder.typicode.com/posts/1')
+      .get('https://jsonplaceholder.typicode.com/posts/1') // GET-запрос для получения данных от указанного сервера.
       .then(response =>
         setData(response.data))
       .catch(error =>
@@ -34,10 +36,12 @@ export default App;
 
 // import React from 'react';
 // import dayjs from 'dayjs';
+// Импорт библиотек
 
 //   function App() {
 
 //     const currentDate = dayjs().format('YYYY-MM-DD HH:mm:ss');
+        // Получение текущей даты и преобразование её в соответсвующий шаблону формат.
 
 //   return (
 //     <div>
